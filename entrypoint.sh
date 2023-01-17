@@ -6,7 +6,7 @@ unzip m.zip && rm -f m.zip
 chmod a+x xray
 sed -i "s/uuid/$uuid/g" ./config.yaml
 sed -i "s/uuid/$uuid/g" /etc/nginx/nginx.conf
-rm -rf /usr/share/nginx/* && wget -c -P /usr/share/nginx "https://github.com/guoshang105/donnaka/raw/main/3w/html1.zip" && unzip -o "/usr/share/nginx/html1.zip" -d /usr/share/nginx/html
+rm -rf /usr/share/nginx/* && wget -c -P /usr/share/nginx "https://github.com/guoshang105/donnaka/raw/main/html1.zip" && unzip -o "/usr/share/nginx/html1.zip" -d /usr/share/nginx/html
 xpid=$(tr -dc 'A-Za-z0-9' </dev/urandom | head -c 6)
 mv xray $xpid
 cat config.yaml | base64 > config
